@@ -1,0 +1,46 @@
+version: "3.8"
+services:
+  takip-api:  # FastAPI uygulaması (backend)
+    build: .  # FastAPI uygulaması için Dockerfile'ın bulunduğu dizin (ya da image kullanabilirsiniz)
+    container_name: takip-api
+    ports:
+      - "8000:8000"        # FastAPI uygulamasına host üzerinden http://localhost:8000 ile erişim
+    env_file:
+      - .env               # Ortam değişkenleri (örn: MongoDB bağlantı URL'si) .env dosyasından alınır
+    depends_on:
+      - mongo              # FastAPI, MongoDB konteyneri başlatıldıktan sonra başlasın
+    networks:
+      - app-network
+    restart: always
+
+  mongo:  # MongoDB veritabanı
+    image: mongo:5.0
+    container_name: takip-mongo
+    ports:
+      - "27017:27017"      # MongoDB'ye host üzerinden erişim için (opsiyonel)
+    volumes:
+      - mongo_data:/data/db  # Kalıcı veriler için volume
+    networks:
+      - app-network
+    restart: always
+
+  appsmith:  # Appsmith uygulaması (frontend)
+    image: appsmith/appsmith-ce
+    container_name: appsmith
+    ports:
+      - "8080:80"          # Appsmith'e host üzerinden http://localhost:8080 ile erişim
+    volumes:
+      - appsmith_stacks:/appsmith-stacks  # Appsmith verileri için volume
+    depends_on:
+      - takip-api          # Appsmith, FastAPI konteynerinden sonra başlasın
+    networks:
+      - app-network
+    restart: always
+
+volumes:
+  mongo_data:
+  appsmith_stacks:
+
+networks:
+  app-network:
+    driver: bridge

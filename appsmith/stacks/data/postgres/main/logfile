@@ -1,0 +1,26 @@
+2025-03-28 14:47:15.478 UTC [2011] LOG:  starting PostgreSQL 14.15 (Ubuntu 14.15-1.pgdg20.04+1) on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 9.4.0-1ubuntu1~20.04.2) 9.4.0, 64-bit
+2025-03-28 14:47:15.479 UTC [2011] LOG:  listening on IPv6 address "::1", port 5432
+2025-03-28 14:47:15.479 UTC [2011] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2025-03-28 14:47:15.509 UTC [2011] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2025-03-28 14:47:15.565 UTC [2013] LOG:  database system was shut down at 2025-03-28 14:47:06 UTC
+2025-03-28 14:47:15.626 UTC [2011] LOG:  database system is ready to accept connections
+2025-03-28 14:47:25.999 UTC [2011] LOG:  received fast shutdown request
+2025-03-28 14:47:26.010 UTC [2011] LOG:  aborting any active transactions
+2025-03-28 14:47:26.013 UTC [2011] LOG:  background worker "logical replication launcher" (PID 2019) exited with exit code 1
+2025-03-28 14:47:26.019 UTC [2014] LOG:  shutting down
+2025-03-28 14:47:26.205 UTC [2011] LOG:  database system is shut down
+2025-03-29 07:18:07.670 UTC [1689] LOG:  starting PostgreSQL 14.15 (Ubuntu 14.15-1.pgdg20.04+1) on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 9.4.0-1ubuntu1~20.04.2) 9.4.0, 64-bit
+2025-03-29 07:18:07.674 UTC [1689] LOG:  listening on IPv6 address "::1", port 5432
+2025-03-29 07:18:07.674 UTC [1689] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2025-03-29 07:18:07.712 UTC [1689] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2025-03-29 07:18:07.822 UTC [1696] LOG:  database system was interrupted; last known up at 2025-03-28 14:52:29 UTC
+2025-03-29 07:18:31.148 UTC [1696] LOG:  database system was not properly shut down; automatic recovery in progress
+2025-03-29 07:18:31.238 UTC [1696] LOG:  redo starts at 0/16F54A8
+2025-03-29 07:18:31.240 UTC [1696] LOG:  invalid record length at 0/16F5590: wanted 24, got 0
+2025-03-29 07:18:31.240 UTC [1696] LOG:  redo done at 0/16F5558 system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2025-03-29 07:18:31.461 UTC [1689] LOG:  database system is ready to accept connections
+2025-03-29 07:18:31.919 UTC [1689] LOG:  received fast shutdown request
+2025-03-29 07:18:31.959 UTC [1689] LOG:  aborting any active transactions
+2025-03-29 07:18:31.962 UTC [1689] LOG:  background worker "logical replication launcher" (PID 1859) exited with exit code 1
+2025-03-29 07:18:31.963 UTC [1854] LOG:  shutting down
+2025-03-29 07:18:32.230 UTC [1689] LOG:  database system is shut down
